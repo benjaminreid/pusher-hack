@@ -1,16 +1,16 @@
 <?php include 'partials/header.php' ?>
-<header class="question">
+<header class="header  question">
   <h1>Does this work?</h1>
 </header>
 <section class="section  voters">
   <div class="yes">
-    <button>
-    <span>Yep!</span>
+    <button class="button">
+      <span>Yep!</span>
     </button>
   </div>
   <div class="no">
-    <button>
-    <span>Nope!</span>
+    <button class="button">
+      <span>Nope!</span>
     </button>
   </div>
 </section>

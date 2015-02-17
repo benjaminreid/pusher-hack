@@ -1,10 +1,13 @@
 <?php include 'partials/header.php' ?>
-<header class="question">
-  <h1>Does this work?</h1>
+<header class="header  question">
+  <input type="text" placeholder="Enter your question">
+  <input type="submit">
 </header>
 <section class="section  results">
   <div class="yes">
-    <h2>Yep!</h2>
+    <span class="">
+      <h2>Yep!</h2>
+    </span>
   </div>
   <div class="no">
     <h2>Nope!</h2>

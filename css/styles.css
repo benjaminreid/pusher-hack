@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+body, html {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  margin-top: 0;
+}
+
+.header {
+  height: 25%;
+  padding: 5%;
+}
+
+.section {
+  height: 75%;
+}
 .yes, .no {
   height: 100%;
   width: 50%;
@@ -11,4 +27,6 @@
 
 .footer, .header, .section {
   clear: both;
+  float: left;
+  width: 100%;
 }
