@@ -38,5 +38,18 @@
     // });
 
     // send('vote', 'send-vote', { vote: 'yes' });
+
+    var $voters = $('[data-voters]');
+
+    if ($voters.length > 0) {
+      var $vote_button = $voters.find('[data-vote]');
+
+      $vote_button.on('click', function(e) {
+        e.preventDefault();
+        var vote = $(this).data('vote');
+        // sends a vote
+        send('vote', 'send-vote', { vote: vote });
+      });
+    }
   });
 })();
