@@ -1,3 +1,3 @@
- <!-- view.php or controller.php -->
+  <script src="js/main.js"></script>
   </body>
 </html>
