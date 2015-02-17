@@ -19,9 +19,13 @@ $app->get('/', function() {
     return new Response();
 });
 
-$app->post('/send', function(Request $request) {
+$app->post('/send', function(Request $request) use ($pusher) {
 
-    error_log(var_export($request->request->all(), true));
+    $pusher->trigger(
+        $request->get('channel'),
+        $request->get('event'),
+        $request->get('data')
+    );
 
     return new Response();
 
