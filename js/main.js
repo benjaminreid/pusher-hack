@@ -32,7 +32,6 @@
     };
 
     var when = function(channel, event, fn) {
-      console.log(channels[channel], channel, channels);
       channels[channel].bind(event, function(data) {
         fn(data);
       });
