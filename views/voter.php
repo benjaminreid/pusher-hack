@@ -1,17 +1,17 @@
 <?php include 'partials/header.php' ?>
-<header class="question">
-  <h1>Does this work?</h1>
+<header class="header  question">
+  <h1 class="question">Does this work?</h1>
 </header>
-<section class="results">
+<section class="section  voters">
   <div class="yes">
-    <button>
-    <span>Yep!</span>
-    </button>
+    <label class="label">
+      <button class="button">Yep!</button>
+    </label>
   </div>
-  </div class="no">
-    <button>
-    <span>Nope!</span>
-    </button>
+  <div class="no">
+    <label class="label">
+      <button class="button">Nope!</button>
+    </label>
   </div>
 </section>
 <?php include 'partials/footer.php' ?>
