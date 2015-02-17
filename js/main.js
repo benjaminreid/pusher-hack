@@ -8,11 +8,6 @@
       vote: pusher.subscribe('vote')
     };
 
-    var ractive = new Ractive({
-      el: '#container',
-      template: '#ractive',
-      data: { name: 'World!' }
-    });
     var send = function(channel, event, data) {
       var payload = {
         channel: channel,
