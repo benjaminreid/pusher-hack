@@ -37,10 +37,11 @@
       });
     };
 
-    when('vote', 'send-vote', function(data) {
-      console.log(data);
-    });
+    // examples
+    // when('vote', 'send-vote', function(data) {
+    //   console.log(data);
+    // });
 
-    send('vote', 'send-vote', { vote: 'yes' });
+    // send('vote', 'send-vote', { vote: 'yes' });
   });
 })();
