@@ -28,11 +28,6 @@ $app->post('/send', function(Request $request) use ($pusher) {
     );
 
     return new Response();
-
-});
-
-$app->get('/voter', function() {
-  return require 'views/voter.php';
 });
 
 $app->run();
