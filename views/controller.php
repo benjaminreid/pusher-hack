@@ -10,4 +10,11 @@
     <h2>Nope!</h2>
   </div>
 </section>
+
+<div id="container"></div>
+
+<script src="text/ractive" id="ractive">
+  <?php include 'partials/ractive.php' ?>
+</script>
+
 <?php include 'partials/footer.php' ?>
