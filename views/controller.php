@@ -4,7 +4,7 @@
   <form action="" data-controller-send>
     <input data-controller-send-input class="question  field" type="text" placeholder="Enter your question"><!-- white space? get out
  --><input type="submit" class="question  submit">
-    <span data-current-question></span>
+    <span data-current-question class="question"></span>
   </form>
 </header>
 
