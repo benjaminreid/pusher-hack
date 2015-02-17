@@ -3,6 +3,11 @@
     var APP_KEY = 'ccc01bbde007761691f4';
     var pusher = new Pusher(APP_KEY);
 
+    var refresh = function() {
+      $('body').animate({ opacity: 0 }, 0)
+              .animate({ opacity: 1 }, 500);
+    };
+
     // channels
     var channels = {
       vote: pusher.subscribe('vote'),
@@ -57,6 +62,7 @@
         var question = res.question;
         var $question = $('[data-question]');
         $question.text(res.question);
+        refresh();
       });
 
       send('session', 'join-notify', {});
@@ -88,12 +94,13 @@
 
       $controller_send.on('submit', function(e) {
         e.preventDefault();
+        refresh();
         var $input = $controller_send.find('[data-controller-send-input]');
         var $current_question = $controller_send.find('[data-current-question]');
         $current_question.text($input.val());
         send('question', 'send-question', { question: $input.val() });
         $input.val('');
-        $controller.find('[data-votes]').text(0)
+        $controller.find('[data-votes]').text(0);
       });
     }
   });
