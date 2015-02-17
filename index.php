@@ -19,26 +19,13 @@ $app->get('/', function() {
     return new Response();
 });
 
-$app->get('/get/{name}', function($name}) use ($cache) {
-    if ($cache->exists($name)) {
-        return $cache->get('test.cache');
-    }
-
-    return null;
-});
-
-$app->post('/send', function(Request $request) use ($pusher, $cache) {
-
-    $channel = $request->get('channel');
-    $event = $request->get('event');
+$app->post('/send', function(Request $request) use ($pusher) {
 
     $pusher->trigger(
-        $channel,
-        $event,
+        $request->get('channel'),
+        $request->get('event'),
         $request->get('data')
     );
-
-    $cache->set("{$channel}-{$event}", json_encode($data));
 
     return new Response();
 });

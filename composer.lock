@@ -4,51 +4,8 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dce2c3e1f3da28b23b913a18fc0dec59",
+    "hash": "06aa38dfbd36455806a2b06edcd2614a",
     "packages": [
-        {
-            "name": "gregwar/cache",
-            "version": "v1.0.10",
-            "target-dir": "Gregwar/Cache",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Gregwar/Cache.git",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/0a1a02e4943e95f491b3d2395609247385975622",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Gregwar\\Cache": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gregwar",
-                    "email": "g.passault@gmail.com"
-                }
-            ],
-            "description": "A lightweight file-system cache system",
-            "keywords": [
-                "cache",
-                "caching",
-                "file-system",
-                "system"
-            ],
-            "time": "2014-09-24 11:23:30"
-        },
         {
             "name": "pimple/pimple",
             "version": "v1.1.1",
