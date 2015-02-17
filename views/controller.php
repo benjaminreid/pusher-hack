@@ -1,20 +1,27 @@
 <?php include 'partials/header.php' ?>
 
-<header class="header  question">
+<header class="header">
   <form action="" data-controller-send>
-    <input data-controller-send-input class="question" type="text" placeholder="Enter your question">
-    <input type="submit">
+    <input data-controller-send-input class="question  field" type="text" placeholder="Enter your question"><!-- white space? get out
+ --><input type="submit" class="question  submit">
+    <span data-current-question class="question"></span>
   </form>
 </header>
 
 <section class="section  results" data-controller>
   <div class="yes">
-    <h2>Yep!</h2>
-    <span data-votes="yes">0</span>
+    <div class="content">
+      <h2 class="vote-option">Yep!</h2>
+      <h3 data-votes="yes">0</h3>
+    </div>
+    <div class="bar" data-vote-bar="yes"></div>
   </div>
   <div class="no">
-    <h2>Nope!</h2>
-    <span data-votes="no">0</span>
+    <div class="content">
+      <h2 class="vote-option">Nope!</h2>
+      <h3 data-votes="no">0</h3>
+    </div>
+    <div class="bar" data-vote-bar="no"></div>
   </div>
 </section>
 
