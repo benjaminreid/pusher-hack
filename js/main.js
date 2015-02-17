@@ -55,8 +55,19 @@
     var $controller = $('[data-controller]');
 
     if ($controller.length > 0) {
-      when('vote', 'send-vote', function(vote) {
-        console.log(vote);
+      var $vote_els = {
+        yes: $controller.find('[data-votes=yes]'),
+        no: $controller.find('[data-votes=no]')
+      };
+
+      var vote = function(vote) {
+        var $el = $vote_els[vote];
+        var count = parseInt($el.text());
+        $el.text(count + 1);
+      };
+
+      when('vote', 'send-vote', function(res) {
+        vote(res.vote)
       });
     }
   });
