@@ -2,13 +2,13 @@
 <header class="question">
   <h1>Does this work?</h1>
 </header>
-<section class="results">
+<section class="section  voters">
   <div class="yes">
     <button>
     <span>Yep!</span>
     </button>
   </div>
-  </div class="no">
+  <div class="no">
     <button>
     <span>Nope!</span>
     </button>

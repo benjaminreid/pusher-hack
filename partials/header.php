@@ -11,4 +11,4 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-  <!-- view.php or controller.php -->
+    <!-- view.php or controller.php -->
