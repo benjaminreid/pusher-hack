@@ -1,8 +1,10 @@
 <?php include 'partials/header.php' ?>
 
 <header class="header  question">
-  <input class="question" type="text" placeholder="Enter your question">
-  <input type="submit">
+  <form action="" data-controller-send>
+    <input data-controller-send-input class="question" type="text" placeholder="Enter your question">
+    <input type="submit">
+  </form>
 </header>
 
 <section class="section  results" data-controller>

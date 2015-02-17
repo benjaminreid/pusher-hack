@@ -1,6 +1,6 @@
 <?php include 'partials/header.php' ?>
 <header class="header  question">
-  <h1 class="question">Does this work?</h1>
+  <h1 class="question" data-question>Awaiting question..</h1>
 </header>
 <section class="section  voters" data-voters>
   <div class="yes">

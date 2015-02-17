@@ -5,7 +5,8 @@
 
     // channels
     var channels = {
-      vote: pusher.subscribe('vote')
+      vote: pusher.subscribe('vote'),
+      question: pusher.subscribe('question')
     };
 
     var send = function(channel, event, data) {
@@ -50,6 +51,12 @@
         // sends a vote
         send('vote', 'send-vote', { vote: vote });
       });
+
+      when('question', 'send-question', function(res) {
+        var question = res.question;
+        var $question = $('[data-question]');
+        $question.text(res.question);
+      });
     }
 
     var $controller = $('[data-controller]');
@@ -68,6 +75,15 @@
 
       when('vote', 'send-vote', function(res) {
         vote(res.vote)
+      });
+
+      var $controller_send = $('[data-controller-send]');
+
+      $controller_send.on('submit', function(e) {
+        e.preventDefault();
+        var $input = $controller_send.find('[data-controller-send-input]');
+        send('question', 'send-question', { question: $input.val() });
+        $input.val('');
       });
     }
   });
