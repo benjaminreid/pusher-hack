@@ -1,1 +1,3 @@
-Damn man you're at the footer!
+ <!-- view.php or controller.php -->
+  </body>
+</html>
