@@ -6,7 +6,8 @@
     // channels
     var channels = {
       vote: pusher.subscribe('vote'),
-      question: pusher.subscribe('question')
+      question: pusher.subscribe('question'),
+      session: pusher.subscribe('session')
     };
 
     var send = function(channel, event, data) {
@@ -57,6 +58,8 @@
         var $question = $('[data-question]');
         $question.text(res.question);
       });
+
+      send('session', 'join-notify', {});
     }
 
     var $controller = $('[data-controller]');
@@ -73,11 +76,15 @@
         $el.text(count + 1);
       };
 
+      var $controller_send = $('[data-controller-send]');
+
       when('vote', 'send-vote', function(res) {
         vote(res.vote)
       });
 
-      var $controller_send = $('[data-controller-send]');
+      when('session', 'join-notify', function() {
+        // send('question', 'send-question', { question: asdas });
+      });
 
       $controller_send.on('submit', function(e) {
         e.preventDefault();
