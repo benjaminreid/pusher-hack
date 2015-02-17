@@ -93,6 +93,7 @@
         $current_question.text($input.val());
         send('question', 'send-question', { question: $input.val() });
         $input.val('');
+        $controller.find('[data-votes]').text(0)
       });
     }
   });
