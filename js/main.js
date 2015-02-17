@@ -84,8 +84,14 @@
 
       var $controller_send = $('[data-controller-send]');
 
+      var vote_count = {
+        yes: 0,
+        no: 0,
+      };
+
       when('vote', 'send-vote', function(res) {
-        vote(res.vote)
+        vote_count[res.vote] += 1;
+        vote(res.vote);
       });
 
       when('session', 'join-notify', function() {
@@ -101,6 +107,10 @@
         send('question', 'send-question', { question: $input.val() });
         $input.val('');
         $controller.find('[data-votes]').text(0);
+        vote_count = {
+          yes: 0,
+          no: 0,
+        };
       });
     }
   });

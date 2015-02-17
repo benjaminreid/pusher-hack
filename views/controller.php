@@ -14,14 +14,14 @@
       <h2 class="vote-option">Yep!</h2>
       <h3 data-votes="yes">0</h3>
     </div>
-    <div class="bar"></div>
+    <div class="bar" data-vote-bar="yes"></div>
   </div>
   <div class="no">
     <div class="content">
       <h2 class="vote-option">Nope!</h2>
       <h3 data-votes="no">0</h3>
     </div>
-    <div class="bar"></div>
+    <div class="bar" data-vote-bar="no"></div>
   </div>
 </section>
 
