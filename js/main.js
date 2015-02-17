@@ -10,4 +10,21 @@
       data: { name: 'World!' }
     });
   });
+
+  var send = function(channel, data) {
+    var payload = data;
+
+    payload.channel = channel;
+
+    $.ajax({
+      url: '/send',
+      type: 'POST',
+      data: data,
+    }).success(function(res) {
+      console.log(res);
+    }).error(function(e) {
+      console.log(e);
+    });
+  };
+  window.send = send;
 })();
