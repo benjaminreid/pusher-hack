@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    var APP_ID = '107543';
+    var APP_ID = 'ccc01bbde007761691f4';
 
     var pusher = new Pusher(APP_ID);
 
