@@ -7,13 +7,11 @@
     <label class="label">
       <button class="vote-option  button" data-vote="yes">Yep!</button>
     </label>
-    <div class="bar"></div>
   </div>
   <div class="no">
     <label class="label">
       <button class="vote-option  button" data-vote="no">Nope!</button>
     </label>
-    <div class="bar"></div>
   </div>
 </section>
 <?php include 'partials/footer.php' ?>
