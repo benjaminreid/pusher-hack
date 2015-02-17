@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
   margin-top: 0;
+}
+
+input, button {
+  outline: none;
+  border: none;
+  background: none;
 }
 
 .header {
@@ -18,14 +25,42 @@ h1, h2, h3, h4, h5 ,h6 {
 .section {
   height: 75%;
 }
-.yes, .no {
+
+.question {
+  font-size: 34px;
+}
+
+input.question {
+  width: 75%;
+}
+
+input.submit {
+  width: 25%;
+}
+
+.yes,
+.no {
   height: 100%;
   width: 50%;
   float: left;
   border: 1px solid red;
+  display: table;
 }
 
-.footer, .header, .section {
+.yes .label,
+.no .label,
+.yes h2,
+.no h2 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.footer,
+.header,
+.section {
   clear: both;
   float: left;
   width: 100%;
