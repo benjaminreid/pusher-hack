@@ -11,20 +11,22 @@
     });
   });
 
-  var send = function(channel, data) {
-    var payload = data;
-
-    payload.channel = channel;
+  var send = function(channel, event, data) {
+    var payload = {
+      channel: channel,
+      event: event,
+      data: data
+    };
 
     $.ajax({
       url: '/send',
       type: 'POST',
-      data: data,
+      data: payload,
     }).success(function(res) {
       console.log(res);
     }).error(function(e) {
       console.log(e);
     });
   };
-  window.send = send;
+  send('foo-channel', 'foo-event', { foo: 'bar' });
 })();
