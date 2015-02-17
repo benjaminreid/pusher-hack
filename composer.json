@@ -1,0 +1,6 @@
+{
+    "name": "nouveller/pusher-hack",
+    "require": {
+        "silex/silex": "~1.2"
+    }
+}
