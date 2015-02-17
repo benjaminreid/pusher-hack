@@ -4,6 +4,7 @@
   <form action="" data-controller-send>
     <input data-controller-send-input class="question" type="text" placeholder="Enter your question">
     <input type="submit">
+    <span data-current-question></span>
   </form>
 </header>
 

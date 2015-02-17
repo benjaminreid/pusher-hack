@@ -82,6 +82,8 @@
       $controller_send.on('submit', function(e) {
         e.preventDefault();
         var $input = $controller_send.find('[data-controller-send-input]');
+        var $current_question = $controller_send.find('[data-current-question]');
+        $current_question.text($input.val());
         send('question', 'send-question', { question: $input.val() });
         $input.val('');
       });
