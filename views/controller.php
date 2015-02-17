@@ -3,7 +3,7 @@
   <input class="question" type="text" placeholder="Enter your question">
   <input type="submit">
 </header>
-<section class="section  results">
+<section class="section  results" data-controller>
   <div class="yes">
     <h2>Yep!</h2>
   </div>

@@ -51,5 +51,13 @@
         send('vote', 'send-vote', { vote: vote });
       });
     }
+
+    var $controller = $('[data-controller]');
+
+    if ($controller.length > 0) {
+      when('vote', 'send-vote', function(vote) {
+        console.log(vote);
+      });
+    }
   });
 })();
