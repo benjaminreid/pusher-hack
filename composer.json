@@ -2,6 +2,7 @@
     "name": "nouveller/pusher-hack",
     "require": {
         "silex/silex": "~1.2",
-        "pusher/pusher-php-server": "2.2.0"
+        "pusher/pusher-php-server": "2.2.0",
+        "gregwar/cache": "~1.0"
     }
 }
