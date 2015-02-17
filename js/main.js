@@ -76,18 +76,25 @@
         no: $controller.find('[data-votes=no]')
       };
 
-      var vote = function(vote) {
-        var $el = $vote_els[vote];
-        var count = parseInt($el.text());
-        $el.text(count + 1);
-      };
-
-      var $controller_send = $('[data-controller-send]');
-
       var vote_count = {
         yes: 0,
         no: 0,
       };
+
+      var vote = function(vote) {
+        var $el = $vote_els[vote];
+        var count = parseInt($el.text());
+        var $yes_bar = $('[data-vote-bar=yes]');
+        var $no_bar = $('[data-vote-bar=no]');
+
+        var one_percent = 100 / (vote_count['yes'] + vote_count['no']);
+        $yes_bar.height((one_percent * vote_count['yes']) + '%');
+        $no_bar.height((one_percent * vote_count['no']) + '%');
+
+        $el.text(count + 1);
+      };
+
+      var $controller_send = $('[data-controller-send]');
 
       when('vote', 'send-vote', function(res) {
         vote_count[res.vote] += 1;
